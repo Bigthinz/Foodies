@@ -1,0 +1,136 @@
+.check-out{
+	position: relative;
+
+
+	.wrapper{
+		margin-top: 50px;
+		width: 300px;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 1px 1px 10px 5px rgba(0,0,0,.03);
+		position: sticky;
+		top: 20px;
+
+
+		.check-list{
+			
+			
+
+			.check-name{
+				border-bottom: 2px solid #f3f3f3;
+
+
+
+				.check-title{
+					display: flex;
+					justify-content: space-between;
+
+					
+					
+				}
+				.delivery-price{
+						margin-bottom: 20px;
+						
+					}
+
+
+				.check-div{
+
+					
+					&-wrap{
+						border-bottom: 2px solid #f3f3f3;
+
+						
+
+						.check-foodlist{
+							display: flex;
+							justify-content: space-between;
+							margin-bottom: 20px;
+
+							.check-food-name{
+
+								div{
+									color: #9DA2AB;
+								}
+							}
+
+							.check-quantity{
+
+								span{
+									padding: 2px 7px;
+									background: orange;
+									line-height: 20px;
+									border-radius: 3px;
+
+									img{
+										width: 10px;
+									}
+								}
+
+								.minus-icon{
+									background: #e5e5e5;
+								}
+
+								.qtn-num{
+									background: #fff;
+									border: 1px solid orange;
+								}
+							}
+						}
+
+						.check-name{
+
+							.food-price{
+
+							}
+						}
+
+
+					}
+
+					.sub-total{
+
+				
+						&-wrap{
+								display: flex;
+								justify-content: space-between;
+							}
+
+							
+						a{
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							text-decoration: none;
+							color: #fff;
+							background: #96B668;
+							border-radius: 5px;
+							box-sizing: border-box;
+							padding: 7px 0px;
+							transition:.2s ease-in-out;
+							box-shadow: 1px 1px 10px 2px rgba(0,0,0,.05);
+
+							&:hover{
+								background: #A0C565;
+								/* box-shadow: 1px 1px 10px 2px rgba(0,0,0,.05)
+											1px 3px 10px 2px rgba(0,0,0,.05); */
+							}
+							
+
+							h4{
+								margin: 0px;
+								padding-left: 3px;
+							}
+
+							img{
+								width: 20px;
+							}
+						}
+							
+						}	
+				}
+			}
+		}
+	}
+
+}

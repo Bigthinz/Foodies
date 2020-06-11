@@ -1,0 +1,157 @@
+.cat-head{
+	width: 100%;
+	height: 400px;
+	background: url("../images/brooke-lark-wMzx2nBdeng-unsplash.jpg");
+	background-size: cover;
+	background-position: right bottom;
+	position: relative;
+
+	&::before{
+		content:'';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right,rgba(0,0,0,.5));
+	}
+
+	.wrap{
+		width: 80%;
+		height: 100%;
+		margin: auto;
+		position:relative;
+		display: flex;
+		align-items: center;
+
+		
+
+		.cat1{
+			
+
+		.heading{
+			color: #fff;
+
+			.p1{
+				font-size: 30px;
+				margin: 0px;
+				padding: 0px;
+
+				.head-bold{
+					font-weight: bold;
+					text-transform: capitalize;
+				}
+
+			}
+
+			.p2{
+
+			}
+
+		}
+
+		.head-search{
+			height: 100%;
+			
+			width: 100%;
+			
+			
+
+			form{
+				height: 40px;
+				background: #fff;
+
+				.search-text{
+					padding: 0px 10px;
+					/* border-right:1px solid #000; */
+					border-radius: 15px 0px 0px 0px;
+					background: #fff;
+					width: 100%;
+				}
+
+
+				.search input{
+					height: 90%;
+					width: 350px;
+					outline: none;
+					border: none;
+					border-right: 1px solid #f3f3f3;
+					border-left: 1px solid #f3f3f3;
+					padding-left: 5px;
+					font-family: Poppins;
+
+					&::placeholder{
+						color: #EFEFEF;
+					}
+
+
+					
+				}
+
+
+
+				.search-icon{
+					background: #fff;
+					width: 100%;
+					padding: 5px 10px;
+					text-decoration: none;
+					/* border-left: 1px solid #000; */
+
+					
+
+
+					i{
+						width: 18px;
+						
+						margin: 0;
+						
+					}
+				}
+			}
+		}
+
+		.trend{
+
+
+
+			.trend-show{
+				text-align: center;
+				display: flex;
+				justify-content: space-between;
+
+				
+				.show-food{
+					width: 120px;
+					box-sizing: border-box;
+					padding: 8px;
+					
+					
+					
+					color: #fff;
+
+					.show-div{
+						width: 70%;
+						object-fit: cover;
+
+						img{
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							
+
+						}
+					}
+
+					.food-title{
+						
+						.amount{
+							color: rgba(255,255,255,.8) !important;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+

@@ -1,0 +1,77 @@
+.work-section{
+	width: 100%;
+	margin-top: 190px;
+	margin-bottom: 60px;
+
+
+	.wrap{
+		width: 800px;
+		display: flex;
+		justify-content:space-between;
+		margin: auto;
+
+		.location-div{
+			width: 45%;
+
+			.loc-title{
+				border-bottom:2px solid #F7F7F7;
+				font-weight: bold;
+				text-transform: capitalize;
+				display: block;
+			}
+
+			.street{
+
+				div{
+
+					span:nth-child(1){
+						color: red;
+					}
+					span:nth-child(2){
+						color: #333;
+					}
+				}
+			}
+		}
+
+		.days-div{
+			width: 45%;
+
+			.day-title{
+				border-bottom: 2px solid #F7F7F7;
+				font-weight: bold;
+				text-transform: capitalize;
+				display: block;
+			}
+			.hours{
+				text-transform: capitalize;
+
+				.pick-up{
+					display: flex;
+					justify-content: space-between;
+
+					span:nth-child(2){
+						font-size: 14px;
+						font-weight: 700;
+					}
+				}
+
+				a{	
+					text-decoration: none;
+					color: #FB6A4B;
+					text-transform: capitalize;
+
+					&:hover{
+						text-decoration: underline;
+					}
+
+				}
+			}
+
+		}
+
+
+	}
+}
+
+

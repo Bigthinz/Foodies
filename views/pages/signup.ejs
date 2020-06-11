@@ -1,0 +1,75 @@
+<%- include('./../includes/head')%>
+<body>
+	<header>
+		<div class="wrap">
+			<a href="/" class="foodies"><h2>Foodies</h2></a>
+			<div></div>
+			<div>
+				<a href="/signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+		</div>
+	</header>
+	<div class="svg">
+		<?xml version="1.0" standalone="no"?>
+		<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		  <path fill="#FFAB13" d="M59.3,-27.9C63.1,-7.7,42.8,11.7,19.9,28.6C-3.1,45.6,-28.7,60.2,-43.6,51.4C-58.5,42.6,-62.7,10.5,-53.6,-17C-44.5,-44.5,-22.3,-67.3,2.8,-68.2C27.8,-69.1,55.5,-48.1,59.3,-27.9Z" transform="translate(100 100)" />
+		</svg>
+
+	</div>
+
+	<div class="svg2">
+			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+		  <path fill="#FFAB30" d="M57.2,-22.6C63.6,1,50.9,26.7,33.4,37.4C16,48,-6.2,43.5,-23.7,31.2C-41.2,18.8,-54,-1.5,-49.3,-22.8C-44.5,-44.1,-22.3,-66.5,1.6,-67C25.4,-67.5,50.9,-46.1,57.2,-22.6Z" transform="translate(100 100)" />
+		</svg>
+	</div>
+
+	
+
+
+	<section class="signup-div">
+		<div class="signup-div-wrap">
+			<div class="gif-div">
+				<div class="intro-msg">
+					<h1>Welcome To Foodies Online Ordering</h1>
+					<p>Let's light some fire and get the show on the road....</p>
+				</div>
+				<img src="/images/image_processing20200413-2451-zlmo1t.gif" alt="">
+			</div>
+			<div class="signup-form">
+				<h3>Sign up</h3>
+				<form action="/auth/signup" method="POST">
+					<div>
+						<input type="text" placeholder="student index" name="student">
+					</div>
+					<div>
+						<input type="email" placeholder="email" name="email">
+					</div>
+					<div>
+						<input type="password" placeholder="password" name="password">
+					</div>
+					<div>
+						<input type="password" placeholder="confirm password" name="confirmPassword">
+					</div>
+					<div class="check">
+						<input type="checkbox" value="terms" class="checkbox">
+						<label for="checkbox">I agree to <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
+					</div>
+					<div class="signbtn-div">
+						<div href="#" class="signbtn">
+							<button type="submit">Get started now</button>
+							<span><img src="/css/font/icons8_circled_right.ico" alt=""></span>
+						</div>
+					</div>
+					<div>
+						<span>Existing user?  <a href="/login">Log in</a></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	
+
+</body>
+</html>	

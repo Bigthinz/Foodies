@@ -1,0 +1,284 @@
+<%- include('./../includes/head')%>
+<body>
+<%- include('./../includes/header')%>
+
+<nav>
+	<div class="wrap">
+		<h3>Add Restaurant</h3>
+		<div><a href="/category">Home </a>/<span> Add Restaurant</span></div>
+	</div>
+</nav>
+
+<div class="reg-form">
+	<div class="wrap">
+		<div class="register-form">
+			<div class="reg-title"><img src="css/font/icons8_food_cart.ico" alt=""><h3>Add Restaurant</h3></div>
+			
+			<h4>Basic Info</h4>
+			<form action="/auth/restaurant" method="POST">
+				<div class="form">
+					<label for="restautant">Restaurant Name <span>*</span></label>
+					<input type="text" name="restaurant" placeholder="Enter restaurant Name">
+				</div>
+				<div class="form">
+					<label for="city">City <span>*</span></label>
+					<input type="text" name="city" placeholder="Search City">
+				</div>
+				<div class="check">
+					<label for="owner">Are the Owner or Manager of the place <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="status" placeholder="Search City" value="Owner">
+						<label for="Owner">I'm the Owner</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="status" placeholder="Search City" value="Manager">
+						<label for="manager">I'm the Manager</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<h4 class="contact-info">Contact Info</h4>
+
+				<div class="form">
+					<label for="email">Email Address <span>*</span></label>
+					<input type="text" name="email"
+					placeholder="Restaurant Email Address">
+				</div>
+				<div class="form">
+					<label for="password">Create Password <span>*</span></label>
+					<input type="password" name="password"
+					placeholder="Enter password">
+				</div>
+				<div class="form">
+					<label for="confirm_password">Confirm Password <span>*</span></label>
+					<input type="password" name="confirm_password"
+					placeholder="Confirm your password">
+				</div>
+				<div class="form">
+					<label for="phone_number">Phone Number <span>*</span></label>
+					<input type="number" name="phone_number" placeholder="Owner / Manager Phone">
+				</div>
+				<div class="form">
+					<label for="resNumber">Restaurant Phone Number <span>*</span></label>
+					<input type="number" name="restaurant_number" placeholder="Restaurant Phone Number">
+				</div>
+				<div class="form">
+					<label for="resWebsite">Restaurant Website <span>*</span></label>
+					<input type="text" name="website" placeholder="Restaurant Website">
+				</div>
+
+
+				<div class="check">
+					<label for="owner">Open Status <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="active" placeholder="readyOpen" value="yes">
+						<label for="readyOpen">The place already open</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="active" placeholder="openSoon" value="no">
+						<label for="openSoon">The place is opening soon</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<h4 class="contact-info">Timing</h4>
+
+				<div class="check">
+					<label for="owner">Add Time <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="work_days" placeholder="readyOpen" value="Monday">
+						<label for="readyOpen">Mon</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Tuesday">
+						<label for="openSoon">Tue</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Wednesday">
+						<label for="openSoon">Wed</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Thursday">
+						<label for="openSoon">Thur</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Friday">
+						<label for="openSoon">Fri</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Saturday">
+						<label for="openSoon">Sat</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_Days" placeholder="openSoon" value="Sunday">
+						<label for="openSoon">Sun</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="avaliable">
+					<div class="form ">
+						<label for="city">From <span>*</span></label>
+						<div class="dropdown">
+							<div class="default-option">8:00 AM</div>
+							<ul>
+								<li>7:00 Am</li>
+								<li>8:00 Am</li>
+								<li>9:00 AM</li>
+								<li>10:00AM</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form ">
+						<label for="city">To <span>*</span></label>
+						<div class="dropdown">
+							<div class="default-option">8:00 AM</div>
+							<ul>
+								<li>4:00 Am</li>
+								<li>5:00 Am</li>
+								<li>6:00 AM</li>
+								<li>7:00AM</li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="add-time">Add Time</a>
+				</div>
+
+				<h4 class="contact-info">Location</h4>
+
+				<div class="form">
+					<label for="address">Enter Address <span>*</span></label>
+					<input type="location" name="address"
+					placeholder="Enter the address">
+				</div>
+
+				<h4 class="contact-info">Characteristics</h4>
+
+				<div class="check">
+					<label for="owner">Services <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="services" placeholder="breakfast" value="breakfast">
+						<label for="readyOpen">Breakfast</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="services" placeholder="lunch" value="lunch">
+						<label for="openSoon">Lunch</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="services" placeholder="dinner" value="dinner">
+						<label for="openSoon">Dinner</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="services" placeholder="cafe" value="cafe's">
+						<label for="openSoon">Cafe's</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="services" placeholder="night" value="nightkise">
+						<label for="openSoon">Nightkise</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="check">
+					<label for="owner">Alcohol <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="alcohol" placeholder="serveAlcohol" value="yes">
+						<label for="readyOpen">Serve</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="alcohol" placeholder="notAlcohol" value="no">
+						<label for="openSoon">Not Serve</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="check">
+					<label for="owner">Seating <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="seating" placeholder="available" value="yes">
+						<label for="available">Available</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="seating" placeholder="notAvailable" value="no">
+						<label for="notAvailable">Not Available</label>
+						</div>
+					</div>
+				</div>
+
+				<h4 class="contact-info">Payment</h4>
+
+				<div class="check pay" >
+					<label for="owner">Method Payment <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="payment" placeholder="cardOnly" value="cash">
+						<label for="cardOnly">Cash Only</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="payment" placeholder="momo" value="momo/card">
+						<label for="momo">Card/Momo</label>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="add-restaurant" title="2014">Add Restaurant</button>
+
+
+			</form>
+
+		</div>
+		<div class="reg-detail">
+			<h3>How It Works</h3>
+
+			<div>
+				<img src="css/font/icons8_google_forms_new_logo_3.ico" alt="">
+				<h3>Fill Form</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero verita.</p>
+			</div>
+
+			<div>
+				<img src="css/font/icons8_paper_plane.ico" alt="">
+				<h3>Send Information</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero veri.</p>
+			</div>
+
+			<div>
+				<img src="css/font/icons8_padlock.ico" alt="">
+				<h3>Verify Listing & Start Working With Foodies</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero verita.</p>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

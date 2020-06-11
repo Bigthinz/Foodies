@@ -1,0 +1,99 @@
+[
+  {
+    "id":1,
+    "restaurantName":"Eusbett",
+    "restaurantFood":"Salad Breeze",
+    "foodPrice":56,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal"],
+    "deliveryTime":"30min",
+    "foodImg":["burger-3.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":2,
+    "restaurantName":"Swift",
+    "restaurantFood":"Pizza",
+    "foodPrice":40,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal","i love it"],
+    "deliveryTime":"30min",
+    "foodImg":["dinner-1.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":3,
+    "restaurantName":"Ausbett Inn",
+    "restaurantFood":"Fried Rice",
+    "foodPrice":36,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal"],
+    "deliveryTime":"30min",
+    "foodImg":["lunch-1.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":4,
+    "restaurantName":"Davvie",
+    "restaurantFood":"Kenkey",
+    "foodPrice":16,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal", "delicious"],
+    "deliveryTime":"30min",
+    "foodImg":["pizza-5.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":5,
+    "restaurantName":"Connie",
+    "restaurantFood":"Jollof",
+    "foodPrice":23,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal","awesome","nice","fine"],
+    "deliveryTime":"30min",
+    "foodImg":["pasta-2.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":6,
+    "restaurantName":"Navida",
+    "restaurantFood":"Rice",
+    "foodPrice":12,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal"],
+    "deliveryTime":"30min",
+    "foodImg":["lunch-6.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":7,
+    "restaurantName":"Golden",
+    "restaurantFood":"Fufu",
+    "foodPrice":12,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal","cool meal"],
+    "deliveryTime":"30min",
+    "foodImg":["lunch-3.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  },
+  {
+    "id":8,
+    "restaurantName":"Mercy Pie",
+    "restaurantFood":"Meat Pie",
+    "foodPrice":11,
+    "rating":4.5,
+    "comment":["nice food there","awesome meal", "i like it"],
+    "deliveryTime":"30min",
+    "foodImg":["menu-1.jpg"],
+    "isDelivery":"free",
+    "icon":"css/font/icons8_cook.ico"
+  }
+
+]

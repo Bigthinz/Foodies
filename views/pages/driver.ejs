@@ -1,0 +1,231 @@
+<%- include('./../includes/head')%>
+<body>
+<%- include('./../includes/header')%>
+
+<nav>
+	<div class="wrap">
+		<h3>Add Driver</h3>
+		<div><a href="/category">Home </a>/<span> Add Driver</span></div>
+	</div>
+</nav>
+
+<div class="reg-form">
+	<div class="wrap">
+		<div class="register-form">
+			<div class="reg-title"><img src="css/font/icons8_motorcycle.ico" alt=""><h3>Add Driver</h3></div>
+			
+			<h4>Basic Info</h4>
+			<form action="/auth/driver" method="POST">
+				<div class="form">
+					<label for="city">City <span>*</span></label>
+					<input type="text" name="city" placeholder="Search City">
+				</div>
+				<div class="check">
+					<label for="status">Are the Owner or Manager of the place <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="status" placeholder="Search City" value="owner">
+						<label for="Owner">I'm the Owner</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="status" placeholder="Search City" value="manager">
+						<label for="manager">I'm the driver</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<h4 class="contact-info">Contact Info</h4>
+
+				<div class="form">
+					<label for="email">Email Address <span>*</span></label>
+					<input type="email" name="email">
+				</div>
+				<div class="form">
+					<label for="phone_number">Phone Number <span>*</span></label>
+					<input type="number" name="phone_number" placeholder="Enter Phone Number">
+				</div>
+
+				<div class="check">
+					<label for="bike">Do you have a Bike <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="bike" value="yes">
+						<label for="readyOpen">I have a Bike</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="bike"  value="no">
+						<label for="openSoon">Buy soon</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<h4 class="contact-info">Timing</h4>
+
+				<div class="check">
+					<label for="owner">Add Time <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="work_days"  value="monday">
+						<label for="readyOpen">Mon</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="tuesday">
+						<label for="openSoon">Tue</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="wednesday">
+						<label for="openSoon">Wed</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="thursday">
+						<label for="openSoon">Thur</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="friday">
+						<label for="openSoon">Fri</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="saturday">
+						<label for="openSoon">Sat</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_days" value="sunday">
+						<label for="openSoon">Sun</label>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="avaliable">
+					<div class="form ">
+						<label for="city">From <span>*</span></label>
+						<div class="dropdown">
+							<div class="default-option">8:00 AM</div>
+							<ul>
+								<li>7:00 Am</li>
+								<li>8:00 Am</li>
+								<li>9:00 AM</li>
+								<li>10:00AM</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form ">
+						<label for="city">To <span>*</span></label>
+						<div class="dropdown">
+							<div class="default-option">8:00 AM</div>
+							<ul>
+								<li>4:00 Am</li>
+								<li>5:00 Am</li>
+								<li>6:00 AM</li>
+								<li>7:00AM</li>
+							</ul>
+						</div>
+					</div>
+
+					<a href="#" class="add-time">Add Time</a>
+				</div>
+
+				<h4 class="contact-info">Location</h4>
+
+				<div class="form">
+					<label for="locationAddress">Enter Address <span>*</span></label>
+					<input type="location" name="location"
+					placeholder="Enter the address">
+				</div>
+
+				<h4 class="contact-info">More Details</h4>
+
+				<div class="check">
+					<label for="owner">Working Details <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="work_time" value="under 3km">
+						<label for="readyOpen">Working under 3km</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="work_time" value="under 5km">
+						<label for="openSoon">Working under 5km</label>
+						</div>
+
+					</div>
+					
+				</div>
+
+				<div class="check">
+					<label for="earning">Earning <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="earning" value="commission">
+						<label for="readyOpen">Every order commision</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="notAlcohol" value="salary">
+						<label for="openSoon">Monthly salary</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="check">
+					<label for="company">Registered By Company <span>*</span></label>
+					<div>
+						<div>
+						<input type="checkbox" name="company"  value="Uber">
+						<label for="available">Uber</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="company"  value="Ayoba Cab">
+						<label for="notAvailable">Ayoba cab</label>
+						</div>
+					</div>
+				</div>
+
+				
+				<button type="submit" class="add-restaurant">Add Driver</button>
+
+
+			</form>
+
+		</div>
+		<div class="reg-detail">
+			<h3>How It Works</h3>
+
+			<div>
+				<img src="css/font/icons8_google_forms_new_logo_3.ico" alt="">
+				<h3>Fill Form</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero verita.</p>
+			</div>
+
+			<div>
+				<img src="css/font/icons8_paper_plane.ico" alt="">
+				<h3>Send Information</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero veri.</p>
+			</div>
+
+			<div>
+				<img src="css/font/icons8_padlock.ico" alt="">
+				<h3>Verify Listing & Start Working With Foodies</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sed quibusdam, omnis et nisi voluptas. Vero verita.</p>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

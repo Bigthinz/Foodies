@@ -1,0 +1,56 @@
+<%-include("./../includes/head")%>
+<body>
+<header>
+		<div class="wrap">
+			<a href="/" class="foodies"><h2>Foodies</h2></a>
+			<div></div>
+			<div>
+				<a href="/all/signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+		</div>
+	</header>	
+
+
+<section class="loggin">
+	<div class="wrap">
+		<div class="log-img"></div>
+		<div class="login-div">
+			<form action="/auth/login" method="POST">
+				<div class="form">
+					<h3>Welcome back!</h3>
+					<p>Login to access your Workspace account</p>
+				</div>
+				<div class="form">
+					<label for="student_id">Student ID</label>
+					<input type="text" name="student">
+				</div>
+				<div class="form">
+					<label for="student_id">Password</label>
+					<input type="password" name="password">
+				</div>
+				<div class="check">
+					<input type="checkbox" name="openSoon" placeholder="openSoon" value="I'm the manager" class="checkbox">
+					<label for="openSoon">Keep me logged in</label>
+					<div>
+						<a href="#">Forgot password?</a>
+					</div>
+				</div>
+				<div>
+					<button type="submit" class="lognbtn">Log in</button>
+				</div>
+
+				
+
+				
+			</form>
+		</div>
+		
+	</div>
+	
+</section>
+
+
+
+</body>
+</html>

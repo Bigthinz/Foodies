@@ -41,15 +41,16 @@
 							width: 210px;
 							height: 29px;
 							border-radius: 5px 0px 0px 5px;
-							border-left: 2px solid orange;
-							border-bottom: 2px solid orange;
-							border-top: 2px solid orange;
+							border-left: 2px solid #f3f3f3;
+							border-bottom: 2px solid #f3f3f3;
+							border-top: 2px solid #f3f3f3;
 							padding-left: 10px;
 							font-family: Poppins;
 
 
 							&::placeholder{
 								padding-left: 0px;
+								
 							}
 						
 

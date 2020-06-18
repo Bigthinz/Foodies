@@ -32,3 +32,20 @@ exports.signup = async (req,res,next)=>{
 	res.status(200).render('pages/signup')
 	next()
 }
+
+exports.membership = async (req,res,next)=>{
+	
+	res.status(200).render('pages/membership')
+	next()
+}
+
+
+exports.dashboard = async (req,res,next)=>{
+	const meal = await Meals.find()
+	
+	res.status(200).render('pages/dashboard',{
+		title:"all meal",
+		meal
+	})
+	next()
+}

@@ -1,31 +1,36 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
+const catchAsync = require('./../utils/catchAsync')
 const User = require('./../model/userModel')
 const Meals = require('./../model/foodModel')
 const Resto = require('./../model/restaurantModel')
 
-
-
-
-
-exports.signup = async (req,res,next)=>{
-
-	try{
-
-		const user =  await User.create(req.body)
-
-	res.status(200).render('pages/login')
-
-	}catch(err){
-		console.log(err)
-	}
-	
+const signToken = (id)=>{
+	return jwt.sign({id}, process.env.JWT_SECRET)
 }
 
-exports.login = async (req,res,next)=>{
 
 
-	try{
+
+exports.signup = catchAsync(async (req,res,next)=>{
+
+	const user =  await User.create(req.body)
+	const token = signToken(user.id)
+	const meal = await Meals.find()
+
+
+	res.status(200).render('pages/category',{
+			meal,
+			data:{
+				user
+			}
+		})
+
+	
+	
+})
+
+exports.login = catchAsync(async (req,res,next)=>{
 			
 		console.log(req.body)
 	const {student, password} = req.body
@@ -58,17 +63,10 @@ exports.login = async (req,res,next)=>{
 			}
 		})
 
-	}catch(err){
-		console.log(err)
 	}
-	
-
-
-
-
 
 	// res.status(200).render('pages/login')
-}
+)
 
 
 

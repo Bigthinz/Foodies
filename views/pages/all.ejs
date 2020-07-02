@@ -1,8 +1,8 @@
 <%- include('./../includes/head')%>
 <body>
 	<header>
-		<div class="wrap">
-			<a href="/" class="foodies"><h2>Foodies</h2></a>
+		<div class="wrap log">
+			<a href="/" class="foodies"><img src="/css/font/Foodies-2.svg" alt=""></a>
 			<div></div>
 			<div>
 				<a href="/all/signup" class="signup">Sign up</a>
@@ -71,7 +71,7 @@
 								<p>Dessert</p>
 						    </span>
 					    </a>
-						<a href="tab-sadedish " class="tab">
+						<a href="tab-sidedish " class="tab">
 							<span>
 								<img src="css/font/icons8_restaurant_2.ico" alt="">
 								<p>Side Dish</p>
@@ -105,9 +105,352 @@
 				</div>
 				
 					</div> -->
+					<div class="work visible" id="tab-discount">
 
 					<% meal.forEach(function(data){%>
-		 <div class="joint visible" id="tab-discount">
+						 <div class="joint " >
+							<div class="food img" style="background-image:url('<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+					<% }); %>
+					</div>
+
+
+						
+						<div class="work" id="tab-pizza">
+
+					<% meal.reverse().forEach(function(data){%>
+					 <div class="joint" >
+						<div class="food img" style="background-image:url('<%= data.images%>')">
+						
+						</div>
+						<div class="food-detail">
+							<div class="detail-one">
+								<% if (data.icon[0]){%>
+								<div class="detail-img">
+									<img src="<%= data.icon%>" alt="">
+								</div>
+								<%}else{%>
+								<div class="not-yet">
+									
+								</div>
+								<%};%>
+
+								<div class="detail-two">
+									<h4><%= data.food%></h4>
+									<span class="joint-name"><%= data.restaurant%></span>
+									<span class="cash">
+										<span>&cent;</span>
+										<span><%= data.price%></span>
+									</span>
+								</div>
+							</div>
+							<div class="detail-three">
+								<div class="deliver">
+									<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+									<span>Delivery Free: <%= data.delivery%></span>
+								</div>
+								<div class="timing">
+									<img src="css/font/icons8_clock_1.ico" alt="">
+									<span>Delivery Time: <%= data.deliveryTime%></span>
+								</div>
+								<div class="rating">
+									<span>
+										<img src="css/font/icons8_star.ico" alt="">
+										
+									</span>
+									<span class="rate"><%= data.rating%></span>
+									<span>
+										<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+										<span><%= data.rating%></span>
+									</span>
+									<a href="#" class="add-food">&plus;</a>
+								</div>
+						</div>
+							</div>
+							
+					</div>
+		<% }); %>
+	</div>
+
+
+     <div class="work" id="tab-humburger">
+
+					<% meal.slice(3,8).forEach(function(data){%>
+		 <div class="joint " >
+			<div class="food img" style="background-image:url('<%= data.images%>')">
+			
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<% if (data.icon[0]){%>
+					<div class="detail-img">
+						<img src="<%= data.icon%>" alt="">
+					</div>
+					<%}else{%>
+					<div class="not-yet">
+						
+					</div>
+					<%};%>
+
+					<div class="detail-two">
+						<h4><%= data.food%></h4>
+						<span class="joint-name"><%= data.restaurant%></span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span><%= data.price%></span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Free: <%= data.delivery%></span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: <%= data.deliveryTime%></span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							
+						</span>
+						<span class="rate"><%= data.rating%></span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span><%= data.rating%></span>
+						</span>
+						<a href="#" class="add-food">&plus;</a>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<% }); %>
+	</div>
+
+<div class="work" id="tab-main">
+					<% meal.slice(4,9).forEach(function(data){%>
+		 <div class="joint " >
+			<div class="food img" style="background-image:url('<%= data.images%>')">
+			
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<% if (data.icon[0]){%>
+					<div class="detail-img">
+						<img src="<%= data.icon%>" alt="">
+					</div>
+					<%}else{%>
+					<div class="not-yet">
+						
+					</div>
+					<%};%>
+
+					<div class="detail-two">
+						<h4><%= data.food%></h4>
+						<span class="joint-name"><%= data.restaurant%></span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span><%= data.price%></span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Free: <%= data.delivery%></span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: <%= data.deliveryTime%></span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							
+						</span>
+						<span class="rate"><%= data.rating%></span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span><%= data.rating%></span>
+						</span>
+						<a href="#" class="add-food">&plus;</a>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<% }); %>
+	</div>
+
+
+	<div class="work" id="tab-soup">
+
+
+					<% meal.slice(2,9).forEach(function(data){%>
+		 <div class="joint " >
+			<div class="food img" style="background-image:url('<%= data.images%>')">
+			
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<% if (data.icon[0]){%>
+					<div class="detail-img">
+						<img src="<%= data.icon%>" alt="">
+					</div>
+					<%}else{%>
+					<div class="not-yet">
+						
+					</div>
+					<%};%>
+
+					<div class="detail-two">
+						<h4><%= data.food%></h4>
+						<span class="joint-name"><%= data.restaurant%></span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span><%= data.price%></span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Free: <%= data.delivery%></span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: <%= data.deliveryTime%></span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							
+						</span>
+						<span class="rate"><%= data.rating%></span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span><%= data.rating%></span>
+						</span>
+						<a href="#" class="add-food">&plus;</a>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<% }); %>
+	</div>
+
+	<div class="work" id="tab-salad">
+
+
+					<% meal.forEach(function(data){%>
+		 <div class="joint " >
+			<div class="food img" style="background-image:url('<%= data.images%>')">
+			
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<% if (data.icon[0]){%>
+					<div class="detail-img">
+						<img src="<%= data.icon%>" alt="">
+					</div>
+					<%}else{%>
+					<div class="not-yet">
+						
+					</div>
+					<%};%>
+
+					<div class="detail-two">
+						<h4><%= data.food%></h4>
+						<span class="joint-name"><%= data.restaurant%></span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span><%= data.price%></span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Free: <%= data.delivery%></span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: <%= data.deliveryTime%></span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							
+						</span>
+						<span class="rate"><%= data.rating%></span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span><%= data.rating%></span>
+						</span>
+						<a href="#" class="add-food">&plus;</a>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<% }); %>
+</div>
+
+
+<div class="work" id="tab-dessert">
+
+					<% meal.forEach(function(data){%>
+		 <div class="joint " >
 			<div class="food img" style="background-image:url('<%= data.images%>')">
 			
 			</div>
@@ -159,10 +502,13 @@
 		</div>
 		<% }); %>
 
+	</div>
+
+	<div class="work" id="tab-sidedish">
 
 
 					<% meal.forEach(function(data){%>
-		 <div class="joint" id="tab-pizza">
+		 <div class="joint " >
 			<div class="food img" style="background-image:url('<%= data.images%>')">
 			
 			</div>
@@ -214,329 +560,7 @@
 		</div>
 		<% }); %>
 
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-humburger">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
-
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-maindish">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
-
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-soup">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
-
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-salad">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
-
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-dessert">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
-
-
-					<% meal.forEach(function(data){%>
-		 <div class="joint " id="tab-sidedish">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
-			
-			</div>
-			<div class="food-detail">
-				<div class="detail-one">
-					<% if (data.icon[0]){%>
-					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
-					</div>
-					<%}else{%>
-					<div class="not-yet">
-						
-					</div>
-					<%};%>
-
-					<div class="detail-two">
-						<h4><%= data.food%></h4>
-						<span class="joint-name"><%= data.restaurant%></span>
-						<span class="cash">
-							<span>&cent;</span>
-							<span><%= data.price%></span>
-						</span>
-					</div>
-				</div>
-				<div class="detail-three">
-					<div class="deliver">
-						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
-						<span>Delivery Free: <%= data.delivery%></span>
-					</div>
-					<div class="timing">
-						<img src="css/font/icons8_clock_1.ico" alt="">
-						<span>Delivery Time: <%= data.deliveryTime%></span>
-					</div>
-					<div class="rating">
-						<span>
-							<img src="css/font/icons8_star.ico" alt="">
-							
-						</span>
-						<span class="rate"><%= data.rating%></span>
-						<span>
-							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
-							<span><%= data.rating%></span>
-						</span>
-						<a href="#" class="add-food">&plus;</a>
-					</div>
-			</div>
-				</div>
-				
-		</div>
-		<% }); %>
+	</div>
 		<!--<div class="joint">
 			<div class="food img3">
 				
@@ -893,7 +917,7 @@
 										</span>
 									</div>
 
-									<a href="/index" alt="">
+									<a href="/all/cart" alt="">
 										<img src="css/font/icons8_checkout_2.ico" alt="">
 										<h4>Order</h4>
 									</a>
@@ -909,6 +933,6 @@
 		</div>
 	</section>
 
-	<script src="js/allCategory.js"></script>
+	<script src="/js/allCategory.js"></script>
 </body>
 </html>

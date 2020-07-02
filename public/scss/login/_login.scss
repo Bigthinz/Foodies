@@ -63,6 +63,7 @@
 						border-radius: 5px;
 						padding-left: 10px;
 						background: #f1f1f1;
+						color: #999;
 
 
 
@@ -71,7 +72,13 @@
 					}
 
 					input:focus{
-					border: 2px solid red;
+					outline: none;
+					border-bottom: 3px solid #ffa500;
+					}
+
+					input:focus:invalid{
+						outline: none;
+						border-bottom: 3px solid #B53426;
 					}
 
 					label{
@@ -99,7 +106,7 @@
 					div{
 							margin-left: 60px;
 							text-decoration: none;
-							color: red;
+							color: #f17e7e;
 							font-size: 11px;
 						}
 				}
@@ -127,8 +134,55 @@
 							background: #A0C565;
 						}
 
+						span{
+							
+						}
+
+						span img{
+							margin-right: 15px;
+							position: relative;
+							top: 3px;
+							
+
+						}
+
 				}
 			}
 		}
 	}
+}
+
+.alert{
+	position: fixed;
+	left: 50%;
+	top: 0;
+	font-size: 11px;
+	line-height: 30px;
+	padding: 5px 45px;
+	color: #f3f3f3;
+	transform: translateX(-50%);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	z-index: 999;
+}
+
+.alert--error{
+	background: #B53426;
+}
+
+.alert--success{
+	background: #96B668;
+}
+
+
+
+::-moz-selection {
+  background-color: #A0C565;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ffa500;
+  color: #fff;
 }

@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 const userSchema = new mongoose.Schema({
 	student:{
 		type:String,
-		required:[true, 'A name is required in this field'],
+		required:[true, 'Student ID is required in this field'],
 		minlength:[10,"Invalid student ID..... Does not meet the required requirement"]
 		
 	},

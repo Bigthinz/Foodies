@@ -1,0 +1,221 @@
+<%- include('./../includes/head')%>
+<body>
+	<header>
+		<div class="wrap log">
+			<a href="/" class="foodies"><img src="/css/font/Foodies-2.svg" alt=""></a>
+			<div></div>
+			<div>
+				<a href="/all/signup" class="signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+		</div>
+	</header>
+
+
+<section class="dash">
+	<div class="wrap">
+		<div class="browse-list">
+			<span><h1>Shopping Cart</h1></span>
+		</div>
+		<div class="browse-list">
+			<span><a href="/">Home</a> / <span class="acct">Shopping Cart</span></span>
+		</div>
+		
+	</div>
+</section>
+
+
+<section class="cart">
+	<div class="cart-wrap">
+		<div class="cart-list">
+			<div class="cart-list-wrap">
+				<div class="cart-table">
+					<div class="table-items">
+						<ul>
+							<li>Preview</li>
+							<li>Food</li>
+							<li>Amount</li>
+							<li>Quantity</li>
+						</ul>	
+					</div>
+					<div class="carts">
+						<div class="food-item">
+							<ul>
+								<li class="food-img"><img src="/images/dinner-2.jpg" alt=""></li>
+								<li>
+									<div class="check-food-name">
+										<sub>2x</sub>
+										<span>Pizza</span>
+										<div><sub>Eusbett restaurant</sub></div>
+									</div>
+								</li>
+								
+								
+								<li>&cent;32</li>
+
+								<li>
+									<div class="check-quantity">
+										<span class="plus-icon"><img src="/css/font/icons8_plus_1.ico" alt=""></span>
+										<span class="qtn-num">2</span>
+										<span class="minus-icon"><img src="/css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</li>
+							</ul>
+							<!-- <span class="food">Waakye</span>
+							<span class="resto">Swift</span>
+							<span class="qtn">1</span>
+							<span class="price">&cent;32</span> -->
+						</div>
+
+						<div class="food-item">
+							<ul>
+								<li class="food-img"><img src="/images/lunch-6.jpg" alt=""></li>
+								<li>
+									<div class="check-food-name">
+										<sub>2x</sub>
+										<span>Pizza</span>
+										<div><sub>Eusbett restaurant</sub></div>
+									</div>
+								</li>
+								
+								
+								<li>&cent;32</li>
+
+								<li>
+									<div class="check-quantity">
+										<span class="plus-icon"><img src="/css/font/icons8_plus_1.ico" alt=""></span>
+										<span class="qtn-num">2</span>
+										<span class="minus-icon"><img src="/css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</li>
+							</ul>
+							<!-- <span class="food">Waakye</span>
+							<span class="resto">Swift</span>
+							<span class="qtn">1</span>
+							<span class="price">&cent;32</span> -->
+						</div>
+
+						<div class="food-item">
+							<ul>
+								<li class="food-img"><img src="/images/pizza-1.jpg" alt=""></li>
+								<li>
+									<div class="check-food-name">
+										<sub>2x</sub>
+										<span>Pizza</span>
+										<div><sub>Eusbett restaurant</sub></div>
+									</div>
+								</li>
+								
+								
+								<li>&cent;32</li>
+
+								<li>
+									<div class="check-quantity">
+										<span class="plus-icon"><img src="/css/font/icons8_plus_1.ico" alt=""></span>
+										<span class="qtn-num">2</span>
+										<span class="minus-icon"><img src="/css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</li>
+							</ul>
+							<!-- <span class="food">Waakye</span>
+							<span class="resto">Swift</span>
+							<span class="qtn">1</span>
+							<span class="price">&cent;32</span> -->
+						</div>
+
+						<div class="food-item">
+							<ul>
+								<li class="food-img"><img src="/images/lunch-3.jpg" alt=""></li>
+								<li>
+									<div class="check-food-name">
+										<sub>2x</sub>
+										<span>Pizza</span>
+										<div><sub>Eusbett restaurant</sub></div>
+									</div>
+								</li>
+								
+								
+								<li>&cent;32</li>
+
+								<li>
+									<div class="check-quantity">
+										<span class="plus-icon"><img src="/css/font/icons8_plus_1.ico" alt=""></span>
+										<span class="qtn-num">2</span>
+										<span class="minus-icon"><img src="/css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</li>
+							</ul>
+							<!-- <span class="food">Waakye</span>
+							<span class="resto">Swift</span>
+							<span class="qtn">1</span>
+							<span class="price">&cent;32</span> -->
+						</div>
+
+						
+					</div>
+				</div>			
+			</div>
+			
+		</div>
+		<div class="cart-checkout">
+			<div class="signup-form">
+				
+				<form class="sign-form" method="POST">
+					<div class="form-headers">
+						<h3>Address</h3>
+					</div>
+					<div>
+						<input type="text" placeholder="Enter your address" name="address" class="student" >
+					</div>
+					<div>
+						<input type="location" placeholder="Region" name="region" class="email">
+					</div>
+					<div>
+						<input type="location" placeholder="City" name="city" class="password" >
+					</div>
+					<div>
+						<input type="text" placeholder="Zip Code" name="zip-code" class="confirmPassword" >
+					</div>
+
+					<div class="form-headers">
+						<h3>Payment Method</h3>
+					</div>
+					<div class="check pay" >
+					<div>
+						<div>
+						<input type="checkbox" name="payment" placeholder="cardOnly" value="cash">
+						<label for="cardOnly">Cash on delivery Only</label>
+						</div>
+
+						<div>
+							<input type="checkbox" name="payment" placeholder="momo" value="momo/card">
+						<label for="momo">Credit Card/Momo</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-headers">
+						<h3>Confirm</h3>
+					</div>
+					<div>
+						<input type="text" placeholder="email" name="email" class="student" >
+					</div>
+					<div>
+						<input type="text" placeholder="Phone Number" name="phone-number" class="email">
+					</div>
+
+					<div class="signbtn-div">
+						<div >
+							<button type="submit" class="signbtn">Checkout
+								<span><img src="/css/font/icons8_circled_right.ico" alt=""></span>
+							</button>
+							
+						</div>
+					</div>
+				
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</section>

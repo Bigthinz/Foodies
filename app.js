@@ -3,6 +3,7 @@ const path = require('path')
 const morgan = require('morgan')
 const express = require('express')
 const fetch = require('node-fetch')
+const cookieParser = require('cookie-parser')
 const globalErrorHandler = require('./controllers/errorController')
 const AppError = require('./utils/appError')
 const userAuth = require('./routes/auth')
@@ -16,14 +17,18 @@ const restaurant = require('./routes/restaurantRoute')
 
 
 
+
 const app = express()
 
+
 app.use(express.json())
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}))
 
 if(process.env.NODE_ENV === 'development'){
 app.use(morgan('dev'))
 }
+
 
 
 app.use(express.static(path.join(__dirname, 'public')))

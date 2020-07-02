@@ -1,6 +1,24 @@
 <%-include("./../includes/head")%>
 <body>
-<%-include("./../includes/header")%>
+
+<header>
+		<div class=" wrap">
+			<a href="/" class="foodies"><img src="/css/font/Foodies-2.svg" alt=""></a>
+			<div class="top-nav">
+				<ul class="nav-listing">
+					<li><a href="/">Home</a></li>
+					<li><a href="/all">Browse</a></li>
+					<li><a href="#">Restaurant</a></li>
+					<li><a href="#">Partner</a></li>
+					
+				</ul>
+			</div>
+			<div>
+				<a href="/all/signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+		</div>
+</header>	
 
 <!-- <div class="loader">
 
@@ -162,61 +180,22 @@
 <section class="browse-three">
 	<div class="wrap">
 		<h1>Discover New Restaurants & Book Now</h1>
-		<div class="browse-div">
-			<div class="browse-list">
-				<a hr#ef="">
-			<div class="icon"><img src="/css/font/icons8_food_and_wine.ico" alt=""></div>
+		
+		<div class="browse-div ">
+			<% meal.forEach(function(data){%>
+			<div class="browse-list carousel-slide">
+				<a hr#ef="/all">
+			<div class="icon"><img src="<%= data.icon%>" alt=""></div>
 			<div class="browse-item">
-				<h3>Connie</h3>
+				<h3><%= data.restaurant%></h3>
 				
 			</div>
 			</a>
 		</div>
-		<div class="browse-list">
-			<a href="#">
-			<div class="icon"><img src="/css/font/icons8_restaurant.ico" alt=""></div>
-			<div class="browse-item">
-				<h3>Swift</h3>
-				
-			</div>
-			</a>
+		<%});%>
+		
 		</div>
-		<a href="#"><div class="browse-list">
-			<div class="icon"><img src="/css/font/icons8_dish_tv.ico" alt=""></div>
-			<div class="browse-item">
-				<h3>Eusbett</h3>
-				
-			</div>
-			</a>
-		</div>
-		<div class="browse-list">
-			<a href="#">
-			<div class="icon"><img src="/css/font/icons8_cook.ico" alt=""></div>
-			<div class="browse-item">
-				<h3>Flex</h3>
-				
-			</div>
-			</a>
-		</div>
-		<div class="browse-list">
-			<a href="#">
-			<div class="icon"><img src="/css/font/icons8_swedish_krona.ico" alt=""></div>
-			<div class="browse-item">
-				<h3>Davvie</h3>
-				
-			</div>
-			</a>
-		</div>
-		<div class="browse-list">
-			<a href="#">
-			<div class="icon"><img src="/css/font/icons8_equestrian_statue_2.ico" alt=""></div>
-			<div class="browse-item">
-				<h3>Golden </h3>
-				
-			</div>
-			</a>
-		</div>
-		</div>
+		
 		
 	</div>
 </section>

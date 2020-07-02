@@ -23,19 +23,26 @@ exports.showAll = async(req,res,next)=>{
 exports.login = async (req,res,next)=>{
 	const message = ""
 	res.status(200).render('pages/login',{message})
-	next()
+	
 }
 
 
 exports.signup = async (req,res,next)=>{
 	
 	res.status(200).render('pages/signup')
-	next()
+	
 }
 
 exports.membership = async (req,res,next)=>{
 	
 	res.status(200).render('pages/membership')
+	next()
+}
+
+
+exports.shoppingCart = async (req,res,next)=>{
+	
+	res.status(200).render('pages/cart')
 	next()
 }
 

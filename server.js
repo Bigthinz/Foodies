@@ -15,7 +15,8 @@ process.on('unhandledException', (err)=>{
 dotenv.config({path: './.env'})
 const app = require('./app')
 
-const DB = process.env.DATABASE_LOCAL
+// const DB = process.env.DATABASE_LOCAL
+const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD)
 
 mongoose.connect(DB,{
 	useNewUrlParser:true,

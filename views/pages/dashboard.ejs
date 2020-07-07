@@ -135,14 +135,14 @@
 					<div class="joint-wrap">
 							<% meal.slice(2,5).reverse().forEach(function(data){%>
 		 <div class="joint">
-			<div class="food img" style="background-image:url('<%= data.images%>')">
+			<div class="food img" style="background-image:url('/images/<%= data.images%>')">
 			
 			</div>
 			<div class="food-detail">
 				<div class="detail-one">
 					<% if (data.icon[0]){%>
 					<div class="detail-img">
-						<img src="<%= data.icon%>" alt="">
+						<img src="/css/font/<%= data.icon%>" alt="">
 					</div>
 					<%}else{%>
 					<div class="not-yet">
@@ -211,6 +211,7 @@
 	
 </section>
 
+<%-include("./../includes/footer")%>
 
 <script src="js/profile.js"></script>
 </body>

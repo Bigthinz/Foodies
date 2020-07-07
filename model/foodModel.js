@@ -60,13 +60,13 @@ const foodSchema = new mongoose.Schema({
 })
 
 
-foodSchema.pre('save', async function(next){
+/*foodSchema.pre('save', async function(next){
 	this.images = '/' + this.images 
 	this.imageCover = '/' + this.imageCover
 	this.icon = '/' + this.icon 
 	
 
-})
+})*/
 
 
 const Meals = mongoose.model('Meals',foodSchema)

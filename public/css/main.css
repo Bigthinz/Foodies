@@ -8,8 +8,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Poppins;
-  font-size: 13px;
-  color: #2e456a;
+  font-size: 12px;
+  color: #333333;
 }
 
 header {
@@ -1098,6 +1098,7 @@ input[type=radio] + label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 100px;
 }
 .quick-search .wrap .featured .list {
   width: 60%;
@@ -1387,6 +1388,8 @@ nav .wrap div span {
   margin-top: 40px;
   margin-left: 30px;
   display: block;
+  border: none;
+  outline: none;
 }
 .reg-form .wrap .register-form .add-restaurant:hover {
   background: rgba(255, 165, 0, 0.8);
@@ -2687,13 +2690,14 @@ header .wrap .signup:hover {
 .joint-wrap .joint {
   width: 230px;
   margin: 25px 0px;
+  color: #2e456a;
 }
 .joint-wrap .joint .food {
   height: 140px;
   width: 240px;
   position: relative;
   overflow: hidden;
-  border-radius: 0px 20px;
+  border-radius: 3px 20px;
   background-size: cover;
   background-position: center;
 }
@@ -2954,6 +2958,7 @@ header .wrap .signup:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: #2e456a;
 }
 .cart-wrap .cart-list {
   width: 63%;
@@ -3028,4 +3033,69 @@ header .wrap .signup:hover {
 }
 .cart-wrap .cart-checkout form .form label {
   font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background: #333;
+}
+footer .wrap {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+}
+footer .wrap .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  font-size: 12px;
+  color: #fff;
+}
+footer .wrap .head .info {
+  width: 25%;
+}
+footer .wrap .head .info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer .wrap .head .info ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .wrap .head .info ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+footer .wrap .copyright {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 10%;
+  margin: auto;
+}
+footer .wrap .copyright a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.me {
+  color: #ffa500 !important;
 }

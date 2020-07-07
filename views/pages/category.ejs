@@ -185,7 +185,7 @@
 			<% meal.forEach(function(data){%>
 			<div class="browse-list carousel-slide">
 				<a hr#ef="/all">
-			<div class="icon"><img src="<%= data.icon%>" alt=""></div>
+			<div class="icon"><img src="/css/font/<%= data.icon%>" alt=""></div>
 			<div class="browse-item">
 				<h3><%= data.restaurant%></h3>
 				
@@ -233,13 +233,13 @@
 		<div class="joint-wrap">
 			<% meal.slice(0,8).forEach(function(data){%>
 			<div class="joint">
-			<div class="food img1 " style="background-image:url(<%= data.images%>)">
+			<div class="food img1 " style="background-image:url(/images/<%= data.images%>)">
 				
 			</div>
 			<div class="food-detail">
 				<div class="detail-one">
 					<div class="detail-img ">
-						<img src="<%= data.icon%>" alt="">
+						<img src="/css/font/<%= data.icon%>" alt="">
 					</div>
 					<div class="detail-two">
 						<h4><%= data.food %></h4>
@@ -661,7 +661,7 @@
 				<div class="list-item">
 					<div class="res res-div">
 						<% if(data.icon){%>
-						<img src="<%= data.icon%>" alt="">
+						<img src="/css/font/<%= data.icon%>" alt="">
 						<%};%>
 						<div>
 							<h4><%= data.restaurant%></h4>
@@ -672,7 +672,7 @@
 						<img src="/css/font/icons8_marker_2.ico" alt="">
 						<span class="loc-icon"><%= data.location%></span>
 					</div>
-					<a href="#">View Menu</a>
+					<a href="#">View</a>
 				</div>
 				<%});%>
 				<!-- <div class="list-item">
@@ -737,13 +737,13 @@
 				<% meal.slice(0,5).sort((a,b)=>b.rating-a.rating).forEach(data => {%>
 				<div class="trends">
 					<div class="res">
-						<img src="<%= data.icon%>" alt="">
+						<img src="/css/font/<%= data.icon%>" alt="">
 						<div>
 							<h4><%= data.restaurant%></h4>
 							Trending
 						</div>
 					</div>
-					<a href="#">View Menu</a>
+					<a href="#">View</a>
 				</div>
 				<%});%>
 				<!-- <div class="trends">
@@ -794,7 +794,7 @@
 </section>
 
 
-
+<%-include("./../includes/footer")%>
 
 
 </body>

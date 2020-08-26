@@ -1,0 +1,59 @@
+<%-include("./../includes/head")%>
+<body>
+<header>
+		<div class="wrap">
+			<a href="/" class="foodies"><img src="/css/font/Foodies-2.svg" alt=""></a>
+			<div></div>
+			
+			<div>
+				<a href="/all/signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+			
+		</div>
+</header>	
+
+
+<section class="loggin">
+	<div class="wrap">
+		<div class="log-img"></div>
+		<div class="login-div">
+			<form action="/auth/login" method="POST" a class="login-form">
+				<div class="form">
+					<h3>Welcome back!</h3>
+					<p>Login to access your Workspace account</p>
+				</div>
+				<div class="form">
+					<label for="student_id">Student ID</label>
+					<input type="text"  name="student" id="index-number" autocomplete="off" value=" " placeholder="UE******223" minlength="10">
+				</div>
+				<div class="form">
+					<label for="student_id">Password</label>
+					<input type="password" name="password" id="password" autocomplete="off" placeholder="**********" minlength="8">
+				</div>
+				<div class="check">
+					<input type="checkbox" name="openSoon" placeholder="openSoon" value="I'm the manager" class="checkbox">
+					<label for="openSoon">Keep me logged in</label>
+					<div>
+						<a href="#">Forgot password?</a>
+					</div>
+				</div>
+				<div>
+					<button type="submit" class="lognbtn">Log in</button>
+				</div>
+
+				
+
+				
+			</form>
+		</div>
+		
+	</div>
+	
+</section>
+
+
+
+<script src="/js/login.js"></script>
+</body>
+</html>

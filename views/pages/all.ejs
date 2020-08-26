@@ -1,0 +1,939 @@
+<%- include('./../includes/head')%>
+<body>
+	<header>
+		<div class="wrap log">
+			<a href="/" class="foodies"><img src="/css/font/Foodies-2.svg" alt=""></a>
+			<div></div>
+			<div>
+				<a href="/all/signup" class="signup">Sign up</a>
+				<a class="signin" href="/all/login">Sign in</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="all-intro">
+		<div class="wrap">
+			
+		</div>
+	</section>
+
+	<section class="category-nav">
+		<div class="wrap">
+			<div class=cate>
+				<div>
+					<div class="cate-wrap">
+					<h1>Categories</h1>
+					<div>
+						<span><img src="css/font/icons8_back_1.ico" alt=""></span>
+						<span><img src="css/font/icons8_forward_1.ico" alt="" class="active"></span>
+					</div>
+				</div>
+
+				<div class="cate-list">
+					<div class="listing">
+						<a href="tab-discount" class="active tab">
+							<span>
+								<img src="css/font/icons8_discount_2.ico" alt="">
+								<p>Discount</p>
+						    </span>
+					    </a>
+						<a href="tab-pizza " class="tab">
+							<span>
+								<img src="css/font/icons8_kawaii_pizza.ico" alt="">
+								<p>Pizza</p>
+						    </span>
+					    </a>
+						<a href="tab-humburger " class="tab">
+							<span>
+								<img src="css/font/icons8_hamburger_4.ico" alt="">
+								<p>Hamburger</p>
+						    </span>
+					    </a>
+						<a href="tab-main " class="tab"><span>
+							<img src="css/font/icons8_meal_2.ico" alt="">
+							<p>Main Dish</p>
+						</span>
+						<a href="tab-soup " class="tab">
+							<span>
+								<img src="css/font/icons8_ladle_2.ico" alt="">
+								<p>Soup</p>
+						    </span>
+					    </a>
+						<a href="tab-salad " class="tab">
+							<span>
+								<img src="css/font/icons8_broccoli_2.ico" alt="">
+								<p>Salad</p>
+						    </span>
+					    </a>
+						<a href="tab-dessert " class="tab">
+							<span>
+								<img src="css/font/icons8_halloween_candy_1.ico" alt="">
+								<p>Dessert</p>
+						    </span>
+					    </a>
+						<a href="tab-sidedish " class="tab">
+							<span>
+								<img src="css/font/icons8_restaurant_2.ico" alt="">
+								<p>Side Dish</p>
+						    </span>
+					    </a>
+					</div>
+				</div>
+
+				<div class="joint-wrap">
+			<!-- <div class="joint">
+			<div class="food img1">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img ">
+						<img src="css/font/icons8_dish_tv.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Salad Breeze</h4>
+						<span class="joint-name">Eusbett</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span>58</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<a href="#">Order</a>
+			</div>
+				</div>
+				
+					</div> -->
+					<div class="work visible" id="tab-discount">
+
+					<% meal.forEach(function(data){%>
+						 <div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+					<% }); %>
+					</div>
+
+
+						
+						<div class="work" id="tab-pizza">
+
+					<% meal.reverse().forEach(function(data){%>
+					 <div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+	</div>
+
+
+     <div class="work" id="tab-humburger">
+
+					<% meal.slice(3,8).forEach(function(data){%>
+		 				<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+	</div>
+
+<div class="work" id="tab-main">
+					<% meal.slice(4,9).forEach(function(data){%>
+		 				<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+	</div>
+
+
+	<div class="work" id="tab-soup">
+
+
+					<% meal.slice(2,9).forEach(function(data){%>
+		 					<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+	</div>
+
+	<div class="work" id="tab-salad">
+
+
+					<% meal.forEach(function(data){%>
+		 						<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+</div>
+
+
+<div class="work" id="tab-dessert">
+
+					<% meal.forEach(function(data){%>
+		 			<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+
+	</div>
+
+	<div class="work" id="tab-sidedish">
+
+
+					<% meal.forEach(function(data){%>
+		 						<div class="joint " >
+							<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+							
+							</div>
+							<div class="food-detail">
+								<div class="detail-one">
+									<% if (data.icon[0]){%>
+									<div class="detail-img">
+										<img src="/css/font/<%= data.icon%>" alt="">
+									</div>
+									<%}else{%>
+									<div class="not-yet">
+										
+									</div>
+									<%};%>
+
+									<div class="detail-two">
+										<h4><%= data.food%></h4>
+										<span class="joint-name"><%= data.restaurant%></span>
+										<span class="cash">
+											<span>&cent;</span>
+											<span><%= data.price%></span>
+										</span>
+									</div>
+								</div>
+								<div class="detail-three">
+									<div class="deliver">
+										<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+										<span>Delivery Free: <%= data.delivery%></span>
+									</div>
+									<div class="timing">
+										<img src="css/font/icons8_clock_1.ico" alt="">
+										<span>Delivery Time: <%= data.deliveryTime%></span>
+									</div>
+									<div class="rating">
+										<span>
+											<img src="css/font/icons8_star.ico" alt="">
+											
+										</span>
+										<span class="rate"><%= data.rating%></span>
+										<span>
+											<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+											<span><%= data.rating%></span>
+										</span>
+										<a href="#" class="add-food">&plus;</a>
+									</div>
+							</div>
+								</div>
+								
+						</div>
+		<% }); %>
+
+	</div>
+		<!--<div class="joint">
+			<div class="food img3">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_restaurant.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Salad Breeze</h4>
+						<span class="joint-name">Swift</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span>32</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<div class="joint">
+			<div class="food img4">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_cook.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Pizza</h4>
+						<span class="joint-name">Flex</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span class="price">70</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		
+		<div class="joint">
+			<div class="food img5">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_cook.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Pizza</h4>
+						<span class="joint-name">Flex</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span class="price">70</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		
+		<div class="joint">
+			<div class="food img6">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_cook.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Pizza</h4>
+						<span class="joint-name">Flex</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span class="price">70</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		
+		<div class="joint">
+			<div class="food img7">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_cook.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Pizza</h4>
+						<span class="joint-name">Flex</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span class="price">70</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		
+		
+		<div class="joint">
+			<div class="food img8">
+				
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<div class="detail-img">
+						<img src="css/font/icons8_cook.ico" alt="">
+					</div>
+					<div class="detail-two">
+						<h4>Pizza</h4>
+						<span class="joint-name">Flex</span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span class="price">70</span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Fee: Free</span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: 30 Min</span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star.ico" alt="">
+							<img src="css/font/icons8_star_half_1.ico" alt="">
+						</span>
+						<span class="rate">4.5</span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span>05</span>
+						</span>
+					</div>
+			</div> -->
+				</div>
+				
+		</div>
+		
+		
+				
+				
+			</div>
+			<div class="check-out">
+				<div class="wrapper">
+					<h3>My Orders</h3>
+					<div class="check-list">
+						<div class="check-name">
+							<div class="check-title">
+								<h5>Name</h5>
+								<h5>Amount</h5>
+							</div>
+							<div class="check-div">
+								<div class="check-div-wrap">
+									<div class="check-foodlist">
+										<div class="check-food-name">
+											<sub>2x</sub>
+											<span>Chiken Burrito</span>
+										</div>
+										<div class="check-quantity">
+											<span class="plus-icon"><img src="css/font/icons8_plus_1.ico" alt=""></span>
+											<span class="qtn-num">2</span>
+											<span class="minus-icon"><img src="css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</div>
+
+									<div class="check-foodlist">
+										<div class="check-food-name">
+											<sub>2x</sub>
+											<span>Pizza</span>
+											<div><sub>Eusbett restaurant</sub></div>
+										</div>
+										<div class="check-quantity">
+											<span class="plus-icon"><img src="css/font/icons8_plus_1.ico" alt=""></span>
+											<span class="qtn-num">2</span>
+											<span class="minus-icon"><img src="css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</div>
+
+									<div class="check-foodlist">
+										<div class="check-food-name">
+											<sub>1x</sub>
+											<span>Salad Breeze</span>
+										</div>
+										<div class="check-quantity">
+											<span class="plus-icon"><img src="css/font/icons8_plus_1.ico" alt=""></span>
+											<span class="qtn-num">2</span>
+											<span class="minus-icon"><img src="css/font/icons8_minus.ico" alt=""></span>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="check-name">
+									<div class="check-title food-price">
+										<h4>food</h4>
+										<h3>&cent;<span>56.00</span></h3>
+									</div>
+
+									<div class="check-title box-price">
+										<span>Box Price</span>
+										<span>&cent;<span>1.50</span></span>
+									</div>
+
+									<div class="check-title delivery-price">
+										<span>Delivery Fee</span>
+										<span>&cent;<span>0.00</span></span>
+									</div>
+								</div>
+
+
+								<div class="sub-total">
+									<div class="sub-total-wrap">
+										<h3>TOTAL</h3>
+										<span>
+											<h3>&cent;<span class="sub-total-amt">58.1</span></h3>
+										</span>
+									</div>
+
+									<a href="/all/cart" alt="">
+										<img src="css/font/icons8_checkout_2.ico" alt="">
+										<h4>Order</h4>
+									</a>
+			
+								</div>		
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<%-include("./../includes/footer")%>
+
+	<script src="/js/allCategory.js"></script>
+</body>
+</html>

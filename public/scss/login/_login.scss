@@ -1,0 +1,188 @@
+.loggin{
+	width: 100%;
+	height: 100vh;
+
+	.wrap{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 1300px;
+		height: 100%;
+
+
+		.log-img{
+			height: 100%;
+			width: 50%;
+			background: url("../images/eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash.jpg");
+			background-size: cover;
+			position: relative;
+
+
+			&:before{
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background:rgba(0,0,0,.3);
+			}
+		}
+
+		.login-div{
+			padding: 20px;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			top: -5%;
+
+			form{
+				width: 50%;
+
+				.form{
+					margin: 20px 0;	
+					display: flex;
+					flex-direction: column;
+
+					h3{
+						font-size: 40px;
+						margin: 2px;
+					}
+					p{
+						margin: 0;
+						margin-bottom: 20px;
+					}
+
+					input{
+						margin-top: 6px;
+						height: 30px;
+						border: 2px solid #f3f3f3;
+						width: 100%;
+						outline: none;
+						border-radius: 5px;
+						padding-left: 10px;
+						background: #f1f1f1;
+						color: #999;
+
+
+
+
+
+					}
+
+					input:focus{
+					outline: none;
+					border-bottom: 3px solid #ffa500;
+					}
+
+					input:focus:invalid{
+						outline: none;
+						border-bottom: 3px solid #B53426;
+					}
+
+					label{
+						font-weight: bold;
+					}			
+				}
+
+				.check{
+					display: flex;
+					align-items: center;
+
+					.checkbox{
+						width: 16px;
+						height: 16px;
+
+						label{
+							color: #333;
+							margin-top: 7px;
+							margin-left: 5px;
+							font-size: 11px !important;
+						}
+
+
+					}
+					div{
+							margin-left: 60px;
+							text-decoration: none;
+							color: #f17e7e;
+							font-size: 11px;
+						}
+				}
+
+				.lognbtn{
+					border: none;
+					outline: none;
+						line-height: 25px;
+						margin-top: 15px;
+						width: 100%;
+						height: 35px;
+						cursor: pointer;
+						background: orange;
+						text-decoration: none;
+						color: #fff;
+						background: #96B668;
+						display: block;
+						border-radius: 7px;
+						padding: 5px 0px;
+						text-align: center;
+						transition:.2s ease-in-out;
+						box-shadow: 1px 1px 10px 2px rgba(0,0,0,.05);
+
+						&:hover{
+							background: #A0C565;
+						}
+
+						span{
+							
+						}
+
+						span img{
+							margin-right: 15px;
+							position: relative;
+							top: 3px;
+							
+
+						}
+
+				}
+			}
+		}
+	}
+}
+
+.alert{
+	position: fixed;
+	left: 50%;
+	top: 0;
+	font-size: 11px;
+	line-height: 30px;
+	padding: 5px 45px;
+	color: #f3f3f3;
+	transform: translateX(-50%);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	z-index: 999;
+}
+
+.alert--error{
+	background: #B53426;
+}
+
+.alert--success{
+	background: #96B668;
+}
+
+
+
+::-moz-selection {
+  background-color: #A0C565;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ffa500;
+  color: #fff;
+}

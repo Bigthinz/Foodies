@@ -1,0 +1,218 @@
+<%- include('./../includes/head')%>
+<body>	
+
+<section class="dash">
+	<div class="wrap">
+		<div class="browse-list">
+			<span><h1>My Account</h1></span>
+		</div>
+		<div class="browse-list">
+			<span><a href="/">Home</a> / <span class="acct">My Account</span></span>
+		</div>
+		
+	</div>
+</section>
+
+<section class="dash-view">
+	<div class="wrap">
+		<div class="cover-img"></div>
+		<div class="dash-title">
+			<div class="profile">
+				<span class="profile-img">
+					<img src="/images/person_1.1.jpg" alt="">
+				</span>
+				<span class="profile-name">
+					<p class="name">King David</p>
+					<p class="loc"><img src="/css/font/icons8_marker.ico" alt="">Sunyani B.A</p>
+				</span>
+			</div>
+			<div class="set">
+				<a href="#"><img src="/css/font/icons8_settings_1.ico" alt="">Settings</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="timeline-view">
+	<div class="wrap">
+		<div class="wrap-2">
+			<div class="timeline-list">
+				<div class="wrap">
+					<div class="tabs">
+						<ul>
+							<li><a href="tab-timeline"  class="active-tab" >Timeline</a></li>
+							<li><a href="tab-orders">My Orders</a></li>
+							<li><a href="tab-offers">Offers</a></li>
+							<li><a href="tab-payment">Payment</a></li>
+							<li><a href="tab-setting">Setting</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="views">
+				<div class="wrap" >
+					<div id="tab-timeline" class="tab visible-tab ">
+					<div>
+						<h1>Timeline</h1>
+						<div class="view">
+							<h4>What would you like to eat?</h4>
+							<div class="suggest">
+								<div class="cate-list timee">
+								<div class="listing">
+									
+									<a href="#">
+										<span>
+											<img src="css/font/icons8_kawaii_pizza.ico" alt="">
+											<p>Pizza</p>
+									    </span>
+								    </a>
+									<a href="#">
+										<span>
+											<img src="css/font/icons8_hamburger_4.ico" alt="">
+											<p>Hamburger</p>
+									    </span>
+								    </a>
+									<a href="#"><span>
+										<img src="css/font/icons8_meal_2.ico" alt="">
+										<p>Main Dish</p>
+									</span>
+									
+									<a href="#">
+										<span>
+											<img src="css/font/icons8_broccoli_2.ico" alt="">
+											<p>Salad</p>
+									    </span>
+								    </a>
+									<a href="#">
+										<span>
+											<img src="css/font/icons8_halloween_candy_1.ico" alt="">
+											<p>Dessert</p>
+									    </span>
+								    </a>
+									
+								</div>
+								<div class="ads-wrap">
+									<div class="ads">
+										<h3>Today's Best Deals</h3>
+										<a href="/all">Show deals</a>
+									</div>
+									<div class="ads-1 ads">
+										<div></div>
+										<div></div>
+									</div>
+								</div>
+
+
+
+							
+								
+							</div>
+							<div class="side-nav">
+									<div class="trend-list">
+									<% meal.slice(0,5).sort((a,b)=>b.rating-a.rating).forEach(data => {%>
+									<div class="trends">
+										<div class="res">
+											<img src="<%= data.icon%>" alt="">
+											<div>
+												<h5><%= data.restaurant%></h5>
+												Trending
+											</div>
+										</div>
+										<a href="#">View</a>
+									</div>
+									<%});%>
+								</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			
+
+				<div class="new">
+					<h1>Your favourite Meals</h1>
+					<div class="joint-wrap">
+							<% meal.slice(2,5).reverse().forEach(function(data){%>
+		 <div class="joint">
+			<div class="food img" style="background-image:url('/images/<%= data.images%>')">
+			
+			</div>
+			<div class="food-detail">
+				<div class="detail-one">
+					<% if (data.icon[0]){%>
+					<div class="detail-img">
+						<img src="/css/font/<%= data.icon%>" alt="">
+					</div>
+					<%}else{%>
+					<div class="not-yet">
+						
+					</div>
+					<%};%>
+
+					<div class="detail-two">
+						<h4><%= data.food%></h4>
+						<span class="joint-name"><%= data.restaurant%></span>
+						<span class="cash">
+							<span>&cent;</span>
+							<span><%= data.price%></span>
+						</span>
+					</div>
+				</div>
+				<div class="detail-three">
+					<div class="deliver">
+						<img src="css/font/icons8_shopping_cart_2.ico" alt="">
+						<span>Delivery Free: <%= data.delivery%></span>
+					</div>
+					<div class="timing">
+						<img src="css/font/icons8_clock_1.ico" alt="">
+						<span>Delivery Time: <%= data.deliveryTime%></span>
+					</div>
+					<div class="rating">
+						<span>
+							<img src="css/font/icons8_star.ico" alt="">
+							
+						</span>
+						<span class="rate"><%= data.rating%></span>
+						<span>
+							<img src="css/font/icons8_speech_bubble_1.ico" alt="">
+							<span><%= data.rating%></span>
+						</span>
+						<a href="#" class="add-food">&plus;</a>
+					</div>
+			</div>
+				</div>
+				
+		</div>
+		<% }); %>
+				</div>
+				</div>
+
+				
+			</div>
+
+			<div id="tab-orders" class="tab">
+				<h1>Orders</h1>
+				<div>
+					<h5>		kaslfkafl</h5>
+				</div>
+			</div>
+			<div id="tab-offers" class="tab">
+				<h1>Offers</h1>
+			</div>
+			<div id="tab-payment" class="tab">
+				<h1>Payment</h1>
+			</div>
+			<div id="tab-setting" class="tab">
+				<h1>Setting</h1>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<%-include("./../includes/footer")%>
+
+<script src="js/profile.js"></script>
+</body>
+</html>

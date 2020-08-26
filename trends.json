@@ -1,0 +1,36 @@
+[
+	{
+		"restaurantName": "swift",
+		"restaurantFood": "Fried Rice",
+		"location": "Sunyani",
+		"icon": "css/font/icons8_swedish_krona.ico" 
+	},
+
+	{
+		"restaurantName": "Eustbett",
+		"restaurantFood": "Fufu",
+		"location": "Berlin-Top",
+		"icon": "css/font/icons8_waiter_1.ico" 
+	},
+
+	{
+		"restaurantName": "Connie",
+		"restaurantFood": "Banku",
+		"location": "UENR",
+		"icon": "css/font/icons8_cook.ico" 
+	},
+
+	{
+		"restaurantName": "Navida",
+		"restaurantFood": "Jollof",
+		"location": "UENR",
+		"icon": "css/font/icons8_equestrian_statue_2.ico" 
+	},
+
+	{
+		"restaurantName": "Golden",
+		"restaurantFood": "Pizza",
+		"location": "Fiapre",
+		"icon": "css/font/icons8_restaurant.ico" 
+	}
+]

@@ -1,4 +1,4 @@
-const Meals = require('./../model/foodModel.js')
+ const Meals = require('./../model/foodModel.js')
 
 exports.overView = async (req,res,next)=>{
 

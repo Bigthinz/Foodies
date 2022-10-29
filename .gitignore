@@ -1,3 +1,4 @@
 prepros-6.config
 products.json
 /node_modules
+/.env

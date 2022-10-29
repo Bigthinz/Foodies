@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm run server.js ",
-    "start:prod": "env NODE_ENV=production npm run server.js"
+    "start": "nodemon server.js ",
+    "start:prod": "env NODE_ENV=production nodemon server.js"
   },
   "keywords": [],
   "author": "",
